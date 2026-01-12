@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ecommerce-api
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Ajoutez les secrets/DB dans le dashboard Render (ne pas les committer)
